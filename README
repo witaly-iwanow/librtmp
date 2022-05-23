@@ -1,3 +1,7 @@
+Mirror of http://git.ffmpeg.org/gitweb/rtmpdump.git (the latest included change is from 2021-02-19) with
+OpenSSL 1.1.1/3 compatibility patches from https://github.com/microsoft/vcpkg/tree/master/ports/librtmp
+(as of 2022-05-23) applied
+
 RTMP Dump v2.4
 (C) 2009 Andrej Stepanchuk
 (C) 2009-2011 Howard Chu
@@ -13,7 +17,7 @@ To compile type "make" with SYS=<platform name>, e.g.
 
 for Linux, Unix, etc. or
 
-  $ make SYS=darwin
+  $ make SYS=darwin INC=-I/opt/homebrew/opt/openssl@3/include XLDFLAGS=-L/opt/homebrew/opt/openssl@3/lib
 
 for MacOSX or
 
